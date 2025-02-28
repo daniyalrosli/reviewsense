@@ -1,4 +1,4 @@
-ReviewSense: Advanced Sentiment Analysis for E-Commerce Reviews
+ReviewSense: Advanced Sentiment Analysis for E-Commerce Reviews (40%)
 
 📚 Project Overview
 
