@@ -1,46 +1,52 @@
-ReviewSense: Advanced Sentiment Analysis for E-Commerce Reviews (40%)
+ReviewSense: Advanced Sentiment Analysis for E-Commerce Reviews
 
-📚 Project Overview
+Overview
 
-ReviewSense is a powerful sentiment analysis tool designed for e-commerce platforms to gain valuable insights from customer reviews. By leveraging advanced Natural Language Processing (NLP) techniques, ReviewSense analyzes customer feedback to classify sentiments, identify trends, and provide actionable insights to enhance business strategies.
+ReviewSense is an advanced sentiment analysis system designed to analyze customer reviews from e-commerce platforms. It extracts sentiment insights to help businesses better understand customer feedback, improve products, and enhance customer satisfaction.
+
+This project applies natural language processing (NLP) techniques, exploratory data analysis (EDA), and machine learning models to classify reviews as positive or negative and generate actionable insights.
 
 
-🎯 Project Objectives
+Dataset
 
-- Sentiment Classification: Determine if reviews are Positive, Negative, or Neutral.
+The dataset contains Amazon product reviews with the following key columns:
+- reviewText: The text of the customer review.
+- overall: The rating given by the customer (1 to 5 stars).
+- reviewTime: Date of the review.
+- summary: Summary of the review.
 
-- Aspect-Based Analysis: Analyze specific product features influencing customer sentiment.
+Data Preprocessing & EDA
 
-- Trend Analysis: Visualize sentiment trends over time and across product categories.
+Steps involved:
+- Removed missing/null values.
+- Performed tokenization, stopwords removal, and text normalization.
+- Extracted review length, word count, and rating distribution.
+- Created a sentiment label:
+- Positive (1) if rating ≥ 4
+- Negative (0) if rating ≤ 3
 
-- Interactive Dashboard: Provide a user-friendly interface for exploring sentiment insights.
+Sentiment Model Building & Evaluation
 
-Data Analysis & Modeling:
+![image](https://github.com/user-attachments/assets/7ce8ca32-bd55-49c4-897e-9249ec477b57)
 
-- Pandas, NumPy for data manipulation
+Best Performing Model: Linear SVC (F1-Score: 0.929)
 
-- NLTK, spaCy, TextBlob for NLP
+Dashboard Insights:
 
-- Transformers (BERT, RoBERTa) for sentiment analysis
+Explanation:
+1. Distribution of Ratings: Most customers gave 5-star ratings, indicating high customer satisfaction.
+2. Average Rating by Year: Shows a steady increase in average ratings over the years.
+3. Distribution of Review Word Count: The majority of reviews are under 100 words, which indicates concise feedback.
+4. Top 10 Most Common Words: Displays the most frequently used words in reviews (e.g., “card”, “work”, “phone”, etc.).
+6. Sentiment Distribution: Overwhelmingly positive sentiment dominates (80-90%).
 
-🚀 Features
+![image](https://github.com/user-attachments/assets/08be7c86-ee5a-498c-968b-466d356c8e61)
 
-- Automated sentiment analysis of customer reviews
 
-- Aspect-based sentiment classification
 
-- Visualization of sentiment trends and insights
 
-- Exportable analytics reports
 
-🧠 How It Works
 
-- Data Collection: Reviews are scraped or fetched via APIs.
 
-- Data Preprocessing: Clean and prepare text data.
 
-- Model Training: Utilize pre-trained models and fine-tune them.
 
-- Sentiment Analysis: Classify sentiment and extract insights.
-
-- Visualization: Display data in an interactive dashboard.
